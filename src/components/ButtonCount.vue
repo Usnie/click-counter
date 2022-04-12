@@ -2,7 +2,8 @@
   <div>
     <h3>Welcome to button count application</h3>
     <p>Button count is: {{count}}</p>
-    <button id =  "my-button" @click="changeCount">click</button>
+    <button id = "btn-increment" @click="onClickIncremet">Increment</button>
+    <button style="margin-left: 10px;" id = "btn-reset" @click="onClickReset">Reset</button>
   </div>
 </template>
 
@@ -14,8 +15,11 @@ export default {
     }
   },
   methods: {
-    changeCount () {
+    onClickIncremet () {
       this.count += 1 // count increment
+    },
+    onClickReset () {
+      this.count = 0 // count reset
     }
   }
 }
