@@ -1,4 +1,5 @@
 # click-counter
+[![Coverage Status](https://coveralls.io/repos/github/Usnie/click-counter/badge.svg?branch=main)](https://coveralls.io/github/Usnie/click-counter?branch=main)
 
 ## Project setup
 ```
