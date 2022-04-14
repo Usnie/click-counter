@@ -11,8 +11,8 @@ describe('ButtonCount.vue', () => {
 
   // check the button present or not
   it('is the button present', () => {
-     const myButton= wrapper.find('#btn-increment');
-     expect(myButton.exists()).toBe(true)
+    const myButton = wrapper.find('#btn-increment')
+    expect(myButton.exists()).toBe(true)
   })
 
   // checks the counter increment on clicking the button
@@ -23,10 +23,10 @@ describe('ButtonCount.vue', () => {
     expect(wrapper.vm.count).toBe(1)
   })
 
-    // checks the counter reseet on clicking the button
-    it('reset functionality', () => {
-      const button = wrapper.find('#btn-reset')
-      button.trigger('click')
-      expect(wrapper.vm.count).toBe(0)
-    })
+  // checks the counter reseet on clicking the button
+  it('reset functionality', () => {
+    const button = wrapper.find('#btn-reset')
+    button.trigger('click')
+    expect(wrapper.vm.count).toBe(0)
+  })
 })
