@@ -1,4 +1,4 @@
-name: Run Tests
+name: Run Test
 
 on:
   pull_request:
@@ -19,6 +19,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - run: |
-          npm install
-          npm run test:unit
+      - run: npm install
+      - run: npm run test:unit
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
