@@ -1,6 +1,4 @@
 # click-counter
-[![Coverage Status](https://coveralls.io/repos/github/Usnie/click-counter/badge.svg?branch=main)](https://coveralls.io/github/Usnie/click-counter?branch=main)
-[![Test](https://github.com/Usnie/click-counter/actions/workflows/test.yml/badge.svg)](https://github.com/Usnie/click-counter/actions/workflows/test.yml)
 
 ## Project setup
 ```
@@ -20,6 +18,7 @@ npm run build
 ### Run your unit tests
 ```
 npm run test:unit
+[![Coverage Status](https://coveralls.io/repos/github/Usnie/click-counter/badge.svg?branch=main)](https://coveralls.io/github/Usnie/click-counter?branch=main)
 ```
 
 ### Lints and fixes files
