@@ -11,7 +11,7 @@ describe('ButtonCount.vue', () => {
 
   // check the button present or not
   it('is the button present', () => {
-    const myButton = wrapper.find('#btn1-increment')
+    const myButton = wrapper.find('#btn-increment')
     expect(myButton.exists()).toBe(true)
   })
 
