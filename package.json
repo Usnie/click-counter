@@ -5,7 +5,7 @@
   "scripts": {
     "heroku-prebuild": "NODE_ENV=development",
     "serve": "vue-cli-service serve",
-    "start": "vue-cli-service serve",
+    "start": "node server.js",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "express": "^4.17.3",
+    "serve-static": "^1.15.0",
     "vue": "^3.2.13"
   },
   "devDependencies": {
