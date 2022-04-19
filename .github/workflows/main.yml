@@ -21,5 +21,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "click-counter-vue" #Must be unique in Heroku
           heroku_email: "Usnie.91@gmail.com"
-          buildpack: "heroku/nodejs"
           buildpack: "https://github.com/heroku/heroku-buildpack-static.git"
