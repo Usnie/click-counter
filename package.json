@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "heroku-postbuild": "NODE_ENV=development && npm install && npm run build && NODE_ENV=production",
+    "heroku-prebuild": "NODE_ENV=development",
     "serve": "vue-cli-service serve",
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
