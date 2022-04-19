@@ -1,1 +1,1 @@
-web: dist/main.html
+web: npm run serve
