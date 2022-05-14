@@ -13,4 +13,4 @@ jobs:
         uses: ElayGelbart/Heroku-Auto-Deployment@v1.0.6
         with:
           herokuApiKey: ${{ secrets.HEROKU_API_KEY}}
-          herokuAppName: ${{ secrets.HEROKU_APP_NAME}}
+          herokuAppName: ${{ secrets.HEROKU_APP_NAME}} #
