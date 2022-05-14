@@ -1,18 +1,16 @@
-name: Deploy
-
+name: Publish To Heroku With Git
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Deploy to Heroku
-        uses: behe/heroku-build@v1
+      - name: Checkout Dir
+        uses: actions/checkout@v2
+      - name: Heroku Deployment
+        uses: ElayGelbart/Heroku-Auto-Deployment@v1.0.6
         with:
-          app-name: "click-counter-vue1"
-          api-key: "${{secrets.HEROKU_API_KEY}}"
-        # / path: "optional-path-of-build-to-deploy"
+          herokuApiKey: ${{ secrets.HEROKU_API_KEY}}
+          herokuAppName: ${{ secrets.HEROKU_APP_NAME}}
