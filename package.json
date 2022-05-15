@@ -3,17 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
+    "start": "node server.js",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@vue/cli-service": "~5.0.0",
     "core-js": "^3.8.3",
     "express": "^4.17.3",
     "serve-static": "^1.15.0",
     "vue": "^3.2.13"
+    
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
