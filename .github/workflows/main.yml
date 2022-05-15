@@ -1,18 +1,16 @@
-name: Deploy
-
+name: Publish To Heroku With Git
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      - name: Checkout Dir
+        uses: actions/checkout@v2
+      - name: Heroku Deployment
+        uses: ElayGelbart/Heroku-Auto-Deployment@v1.0.6
         with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "click-counter-vue1" 
-          heroku_email: "Usnie.91@mail.ru"
-          procfile: "web: npm start" #
+          herokuApiKey: ${{ secrets.HEROKU_API_KEY}}
+          herokuAppName: ${{ secrets.HEROKU_APP_NAME}}
