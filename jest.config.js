@@ -1,4 +1,3 @@
-Листинг 4. Код jest.config.js
 module.exports = {
     preset: '@vue/cli-plugin-unit-jest',
     collectCoverage: true,
