@@ -1,5 +1,4 @@
 # click-counter
-
 ## Project setup
 ```
 npm install
