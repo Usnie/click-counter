@@ -1,0 +1,31 @@
+name: Deploy to Github Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    name: Deploy Application
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['18','20']
+    steps:
+        name: Checkout Repo
+        uses: actions/checkout@v4
+        name: Create Node Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+        name: Install Packages and Build Application
+        run: 
+          npm install –g @vue/cli yarn
+          yarn install
+          yarn build
+        name: Deploy
+       uses: s0/git-publish-subdir-action@main
+       env: 
+         REPO: click-counter
+         BRANCH: deploy
+         FOLDER: dist
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
