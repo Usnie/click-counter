@@ -24,7 +24,7 @@ jobs:
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
-          REPO: click-counter
+          REPO: self
           BRANCH: main
           FOLDER: dist
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
